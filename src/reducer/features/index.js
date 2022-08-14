@@ -1,3 +1,5 @@
 import CounterReducer from "./CounterSlice";
+import PostReducer from "./PostSlice";
 export * from "./CounterSlice";
-export { CounterReducer };
+export * from "./PostSlice";
+export { CounterReducer, PostReducer };
