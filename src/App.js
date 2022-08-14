@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Layout/NavBar";
 import { About, Home } from "./pages";
+import { NavBar } from "./components/Layout";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -30,7 +32,8 @@ function App() {
   };
   return (
     <>
-      <Navbar title="Learn" about="About" mode={mode} toggleMode={toggleMode} />
+      {/* <Navbar title="Learn" about="About" mode={mode} toggleMode={toggleMode} /> */}
+      <NavBar mode={mode} toggleMode={toggleMode} />
       <Routes>
         <Route
           path="/"
